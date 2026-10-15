@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "nwwv.studio" }],
+      "destination": "https://www.newwavestack.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nwwv.studio" }],
+      "destination": "https://www.newwavestack.com/:path*",
+      "permanent": true
+    }
+  ]
+}
