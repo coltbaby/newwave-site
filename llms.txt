@@ -1,0 +1,19 @@
+# New Wave
+
+> The AI stack for professional designers. Every week, New Wave tests new AI tools on real creative jobs (logo, social, ads, web, thumbnails) and gives a creative director's verdict: Use, Skip, or Watch. Run by creative directors in the United States.
+
+## Offers
+- Creative AI Stack newsletter (weekly, Tuesdays): free top 3 verdicts; paid $12/mo or $120/yr (founding $8/mo for first 100); student $5/mo or $48/yr.
+- Monthly shootout: one fictional brief run through every tool, scored side by side.
+- Agent recipe library: tested n8n, Zapier, and Claude workflows, $29-99 each, bundles $99-149, Recipe Club $20/mo.
+- Backstop by New Wave (done-for-you studio): Core $600/mo, Plus $1,000/mo, Premium $1,500/mo, plus $500 setup. Roster capped at 8 clients.
+- For sponsors: labeled featured listings and newsletter sponsor slots.
+
+## Editorial independence
+- Verdicts are never for sale. No pay-to-remove.
+- All paid placements are labeled Sponsored, Featured, or Affiliate and sit apart from verdicts.
+- Affiliate links only on tools rated Use.
+
+## Pages
+- [Home](https://newwavestack.com/)
+- [Sitemap](https://newwavestack.com/sitemap.xml)
