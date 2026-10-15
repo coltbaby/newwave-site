@@ -18,8 +18,9 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .nav.scrolled .logo-drop{max-width:0;margin-right:0;opacity:0}
 .navlinks{grid-column:4/11;display:flex;gap:22px;font-size:14px;font-weight:500}
 .navlinks a{white-space:nowrap}
-.navlinks a,.foot a,.arrow-btn{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease)}
-.navlinks a:hover,.foot a:hover,.arrow-btn:hover{background-size:100% 1px}
+.navlinks a,.foot a,.arrow-btn,.stack-more a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease)}
+.navlinks a:hover,.foot a:hover,.arrow-btn:hover,.stack-more a:hover{background-size:100% 1px}
+.stack-more a{background-size:100% 1px}
 .navcta{grid-column:11/13;justify-self:end;font-size:14px;font-weight:500}
 .menu{display:none}
 /* type */
@@ -90,6 +91,10 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .item-link .lbl{display:inline-block;margin-top:10px}
 .note{font-size:14px;color:var(--mute);max-width:46ch;margin-top:8px;opacity:0;transform:translateY(-4px);transition:.5s var(--ease)}
 .item-link:hover .note,.item-link:focus .note{opacity:1;transform:none}
+#weekly-stack .note{opacity:1;transform:none}
+.stack-more{padding:0 var(--pad);margin-top:clamp(28px,3.6vw,48px);max-width:42ch;line-height:1.45}
+.recipe-note{margin-top:16px}
+#verdicts,#weekly-stacks,#weekly-stack,#pricing,#membership{scroll-margin-top:76px}
 .item:nth-child(2){margin-top:clamp(80px,12vw,200px)}
 /* plate wrapper overflow for scale */
 .item .art{display:block}
@@ -161,14 +166,20 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
 /* mobile */
+html.nav-open,body.nav-open{overflow:hidden}
 @media (max-width:860px){
  .grid>*{grid-column:1/-1!important}
- .nav{mix-blend-mode:normal;color:var(--ink);background:rgba(245,245,242,.92);backdrop-filter:blur(12px);grid-template-columns:1fr auto auto;gap:16px}
- .logo{grid-column:auto}.navcta{grid-column:auto}
- .menu{display:grid;gap:5px;background:none;border:0;padding:8px 0;cursor:pointer}.menu span:not(.sr){width:22px;height:1.5px;background:currentColor;transition:.4s var(--ease)}
+ .nav{mix-blend-mode:normal;color:var(--ink);background:rgba(245,245,242,.92);grid-template-columns:minmax(0,1fr) auto auto;gap:16px}
+ .nav>nav{grid-column:1;grid-row:1;width:0;height:0;overflow:visible}
+ .logo{grid-column:1;grid-row:1}.navcta{grid-column:2;grid-row:1}
+ .menu{grid-column:3;grid-row:1;position:relative;z-index:2;display:grid;gap:5px;align-content:center;justify-items:center;background:none;border:0;padding:12px;margin-right:-8px;min-width:44px;min-height:44px;cursor:pointer;justify-self:end}
+ .menu span:not(.sr){width:22px;height:1.5px;background:currentColor;transition:.4s var(--ease)}
  .menu[aria-expanded=true] span:nth-child(1){transform:translateY(3.25px) rotate(45deg)}.menu[aria-expanded=true] span:nth-child(2){transform:translateY(-3.25px) rotate(-45deg)}
- .navlinks{position:fixed;inset:60px 0 auto;flex-direction:column;gap:0;background:var(--bg);padding:8px var(--pad) 28px;font-size:32px;font-weight:600;letter-spacing:-.04em;clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease)}
- .navlinks.open{clip-path:inset(0 0 0 0)}.navlinks li{border-bottom:1px solid var(--line);padding:8px 0}
+ .logo,.navcta{position:relative;z-index:2}
+ .navlinks{position:fixed;inset:0;z-index:1;grid-column:auto;width:auto;height:auto;flex-direction:column;gap:0;background:var(--bg);padding:84px var(--pad) 32px;font-size:32px;font-weight:600;letter-spacing:-.04em;overflow:auto;clip-path:inset(0 0 100% 0);visibility:hidden;pointer-events:none;transition:clip-path .6s var(--ease),visibility 0s linear .6s}
+ .nav.is-open{transform:none}
+ .navlinks.open{clip-path:inset(0 0 0 0);visibility:visible;pointer-events:auto;transition:clip-path .6s var(--ease),visibility 0s}
+ .navlinks li{border-bottom:1px solid var(--line);padding:8px 0}
  .hero{row-gap:28px}.hero-verb,.hero-lede{font-size:19px}
  .legend{flex-direction:column;align-items:flex-start;gap:4px}
  .legend>span+span::before{content:none;margin:0}

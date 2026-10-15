@@ -1,7 +1,17 @@
 const $=s=>document.querySelector(s);
-const m=$('.menu'),l=$('#navlinks');
-m.addEventListener('click',()=>{const o=l.classList.toggle('open');m.setAttribute('aria-expanded',o)});
-l.addEventListener('click',e=>{if(e.target.tagName==='A'){l.classList.remove('open');m.setAttribute('aria-expanded',false)}});
+const m=$('.menu'),l=$('#navlinks'),n=$('[data-nav]');
+const setMenu=open=>{
+  l.classList.toggle('open',open);
+  n.classList.toggle('is-open',open);
+  if(open)n.classList.remove('hide');
+  m.setAttribute('aria-expanded',open?'true':'false');
+  document.documentElement.classList.toggle('nav-open',open);
+  document.body.classList.toggle('nav-open',open);
+};
+m.addEventListener('click',()=>setMenu(!l.classList.contains('open')));
+l.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&l.classList.contains('open')){setMenu(false);m.focus()}});
+addEventListener('resize',()=>{if(innerWidth>860&&l.classList.contains('open'))setMenu(false)});
 const emailOk=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)&&s.length<=254;
 document.querySelectorAll('.signup').forEach(form=>{
   const status=form.querySelector('.ok');
@@ -47,13 +57,13 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{
   i=(i+1)%w.length;
 },2200);
 // hide nav on scroll down; condense the wordmark once past ~40px
-let y=0;const n=$('[data-nav]');
+let y=0;
 const drops=[...document.querySelectorAll('.logo-drop')];
 const logo=$('.logo');
 const fit=()=>drops.forEach(el=>{const probe=document.createElement('span');probe.textContent=el.textContent;probe.style.cssText='position:absolute;visibility:hidden;white-space:pre;letter-spacing:0;font:inherit';logo.appendChild(probe);el.style.setProperty('--w',probe.getBoundingClientRect().width+'px');probe.remove()});
 fit();
 if(document.fonts)document.fonts.ready.then(fit);
-const onScroll=()=>{const c=scrollY;n.classList.toggle('hide',c>y&&c>200&&!l.classList.contains('open'));n.classList.toggle('scrolled',c>40);y=c};
+const onScroll=()=>{const c=scrollY;const open=l.classList.contains('open');n.classList.toggle('hide',!open&&c>y&&c>200);n.classList.toggle('scrolled',c>40);y=c};
 addEventListener('scroll',onScroll,{passive:true});
 onScroll();
 // scroll reveal
