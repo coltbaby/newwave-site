@@ -5,7 +5,7 @@
 ## Offers
 - Creative AI Stack newsletter (weekly, Tuesdays): free top 3 verdicts; paid $12/mo or $120/yr (founding $8/mo for first 100); student $5/mo or $48/yr. The full Weekly Stack is for Paid members.
 - Case Study (monthly, Paid tier only): a real brief from a Paid member who opts in, run through the stack with a creative director, published as a case study (tools, prompts, what worked, what didn't, final outputs). Briefs are shared with permission and can be anonymized. Paid members can submit a brief. Not included with Free or Student.
-- Agent recipe library: tested n8n, Zapier, and Claude workflows, $29-99 each, bundles $99-149, Recipe Club $20/mo. Paid members save 30% on every recipe.
+- Agent recipe library: outlined n8n, Zapier, and Claude workflows, not yet tested, $29-99 each, bundles $99-149, Recipe Club $20/mo. Paid members save 30% on every recipe.
 - Backstop by New Wave (done-for-you studio): Core $600/mo, Plus $1,000/mo, Premium $1,500/mo, plus $500 setup. Roster capped at 8 clients. Full Agency $9,500/mo plus $2,500 setup, limited to 2 clients.
 - For sponsors: labeled featured listings and newsletter sponsor slots.
 
