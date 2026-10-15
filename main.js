@@ -2,7 +2,28 @@ const $=s=>document.querySelector(s);
 const m=$('.menu'),l=$('#navlinks');
 m.addEventListener('click',()=>{const o=l.classList.toggle('open');m.setAttribute('aria-expanded',o)});
 l.addEventListener('click',e=>{if(e.target.tagName==='A'){l.classList.remove('open');m.setAttribute('aria-expanded',false)}});
-$('.signup').addEventListener('submit',e=>{e.preventDefault();e.target.querySelector('.ok').hidden=false});
+const emailOk=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)&&s.length<=254;
+document.querySelectorAll('.signup').forEach(form=>{
+  const status=form.querySelector('.ok');
+  const btn=form.querySelector('button[type=submit]');
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const data=new FormData(form);
+    const email=String(data.get('email')||'').trim();
+    const show=(msg,err)=>{status.hidden=false;status.textContent=msg;status.classList.toggle('is-err',err)};
+    if(!emailOk(email)){show('Enter a valid email address.',true);return}
+    btn.disabled=true;
+    status.hidden=true;
+    try{
+      const res=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,company:String(data.get('company')||'')})});
+      const body=await res.json().catch(()=>({}));
+      if(res.ok&&body.ok){show("You're in. First issue lands Tuesday.",false);form.reset()}
+      else if(res.status===400)show(body.error||'Enter a valid email address.',true);
+      else show('Something went wrong. Try again.',true);
+    }catch{show('Something went wrong. Try again.',true)}
+    finally{btn.disabled=false}
+  });
+});
 // rotating verdict word: exit up and fade, enter from below, snap back with no transition
 const w=[...document.querySelectorAll('[data-rot] b')];let i=0;w[0].classList.add('is-active');
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{

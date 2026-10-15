@@ -62,12 +62,13 @@
 
 <section id="subscribe" class="grid signup-row" aria-labelledby="sub-h">
   <h2 id="sub-h" class="c-1-5 h-s">Creative AI Stack<br><span class="mute">Weekly, Tuesdays 6 a.m. MT. Free.</span></h2>
-  <form class="signup c-7-12" action="#" method="post" aria-label="Newsletter signup">
+  <form class="signup c-7-12" action="/api/subscribe" method="post" aria-label="Newsletter signup">
     <label for="email" class="sr">Email address</label>
-    <input id="email" type="email" name="email" placeholder="Your email" required autocomplete="email">
+    <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input id="email" type="email" name="email" placeholder="Your email" required autocomplete="email" maxlength="254">
     <button type="submit" class="arrow-btn" aria-label="Subscribe">Subscribe <i>→</i></button>
     <p class="fine">Top 3 verdicts weekly, sorted by creative job: logo, social, ads, web, thumbnails. No affiliate listicles.</p>
-    <p class="ok" role="status" hidden>You're on the list. (Mockup only. Nothing was sent.)</p>
+    <p class="ok" role="status" aria-live="polite" hidden></p>
   </form>
 </section>
 

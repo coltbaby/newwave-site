@@ -58,7 +58,11 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .signup{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--ink);row-gap:0}
 .signup input{border:0;background:transparent;font:500 clamp(24px,2.6vw,40px)/1 var(--f);letter-spacing:-.03em;padding:8px 0 16px;outline:0;min-width:0}
 .signup input::placeholder{color:#b9b9b4}
+.signup .hp{position:absolute;left:-9999px;width:1px;height:1px;padding:0;overflow:hidden}
 .signup .fine,.signup .ok{grid-column:1/3;position:relative;top:16px}
+.signup .ok.is-err{color:var(--skp)}
+.signup .arrow-btn:disabled{opacity:.4;cursor:default}
+.signup .arrow-btn:disabled:hover i{transform:none}
 .arrow-btn{display:inline-flex;gap:.4em;align-items:center;font:500 15px var(--f);background-color:transparent;border:0;cursor:pointer;color:inherit;padding-bottom:2px;align-self:center}
 .arrow-btn i{font-style:normal;display:inline-block;transition:transform .45s var(--ease)}.arrow-btn:hover i{transform:translateX(5px)}
 /* sections */
