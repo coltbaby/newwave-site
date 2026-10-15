@@ -107,6 +107,14 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .tier h3{font-size:15px;font-weight:600}.tier p:last-child{grid-column:2;font-size:14px;color:var(--mute);margin-top:-4px}
 .amt{font-weight:600;font-size:clamp(40px,4.2vw,68px);line-height:.95;letter-spacing:-.05em;grid-column:2;grid-row:1}
 .amt small{font-size:14px;font-weight:500;letter-spacing:0;color:var(--mute);margin-left:4px}
+.tier-flag{grid-template-columns:1fr auto;align-items:baseline;border-top:4px solid var(--ink);padding-top:18px;margin-top:10px}
+.tier-flag h3{font-size:clamp(22px,2vw,28px);letter-spacing:-.03em}
+.tier-flag .amt{white-space:nowrap;justify-self:end}
+.tier-flag .limit,.tier-flag .pitch,.tier-flag .includes,.tier.tier-flag p.fine{grid-column:1/-1}
+.tier-flag .limit{font-size:13px;color:var(--mute);margin-top:4px}
+.tier-flag .pitch{font-size:15px;line-height:1.35;letter-spacing:-.015em;max-width:42ch;margin-top:16px}
+.tier-flag .includes{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--g);row-gap:8px;margin-top:18px;font-size:14px;line-height:1.35;color:var(--mute)}
+.tier.tier-flag p.fine{margin-top:16px;font-size:12px}
 .tier-foot{display:flex;justify-content:space-between;gap:20px;padding-top:20px;flex-wrap:wrap}
 .plans{row-gap:40px}
 .plan{border-top:1px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:12px;min-height:340px}
@@ -156,5 +164,10 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
  .index a{grid-template-columns:28px 1fr auto;row-gap:6px}.index .n{grid-column:1}.index .t{grid-column:2}.index .p{grid-column:3;grid-row:1}.index .d{grid-column:2/4}.index .s{grid-column:2/4;grid-row:auto}
  .signup{grid-template-columns:1fr}.signup .arrow-btn{justify-self:start;padding:12px 0}.signup .fine,.signup .ok{grid-column:1;top:0;padding-bottom:8px}
  .tier{grid-template-columns:1fr}.amt,.tier p:last-child{grid-column:1;grid-row:auto}
+ .tier-flag .amt{justify-self:start}
+ .tier-flag .includes{grid-template-columns:1fr}
  .plan{min-height:0}
+}
+@media (max-width:1100px){
+ .tier-flag .includes{grid-template-columns:1fr}
 }
