@@ -13,7 +13,9 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 /* nav */
 .nav{position:fixed;inset:0 0 auto;z-index:10;display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--g);align-items:center;padding:18px var(--pad);transition:transform .5s var(--ease),background .3s;mix-blend-mode:difference;color:#fff}
 .nav.hide{transform:translateY(-100%)}
-.logo{grid-column:1/4;font-weight:700;font-size:20px;letter-spacing:-.04em}.logo sup{font-size:9px;font-weight:500;margin-left:1px}
+.logo{grid-column:1/4;font-weight:700;font-size:20px;letter-spacing:-.04em;white-space:nowrap}.logo sup{font-size:9px;font-weight:500;margin-left:1px}
+.logo-drop{display:inline-block;max-width:var(--w,1em);margin-right:-.04em;clip-path:inset(0);letter-spacing:0;opacity:1;vertical-align:baseline;white-space:nowrap;transition:max-width .4s var(--ease),opacity .4s var(--ease),margin-right .4s var(--ease)}
+.nav.scrolled .logo-drop{max-width:0;margin-right:0;opacity:0}
 .navlinks{grid-column:4/11;display:flex;gap:22px;font-size:14px;font-weight:500}
 .navlinks a,.foot a,.arrow-btn{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease)}
 .navlinks a:hover,.foot a:hover,.arrow-btn:hover{background-size:100% 1px}
