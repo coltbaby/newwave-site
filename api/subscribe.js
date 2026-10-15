@@ -30,9 +30,46 @@ function isDuplicate(status, text) {
   return /already exists|duplicate/i.test(text);
 }
 
+const ALLOWED_ORIGINS = new Set([
+  'https://www.newwavestack.com',
+  'https://newwavestack.com',
+  'https://nwwv.studio',
+  'https://www.nwwv.studio',
+]);
+
+function allowedOrigin(req) {
+  const origin = String(req.headers?.origin || '');
+  if (ALLOWED_ORIGINS.has(origin)) return origin;
+  const referer = String(req.headers?.referer || req.headers?.referrer || '');
+  if (!referer) return '';
+  try {
+    const fromReferer = new URL(referer).origin;
+    if (ALLOWED_ORIGINS.has(fromReferer)) return fromReferer;
+  } catch {
+    /* ignore a malformed referer */
+  }
+  return '';
+}
+
+function setCors(req, res) {
+  const origin = allowedOrigin(req);
+  if (!origin) return;
+  res.setHeader('Access-Control-Allow-Origin', origin);
+  res.setHeader('Vary', 'Origin');
+}
+
 export default async function handler(req, res) {
+  setCors(req, res);
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+    res.setHeader('Access-Control-Max-Age', '86400');
+    res.setHeader('Allow', 'POST, OPTIONS');
+    res.status(204);
+    return res.end();
+  }
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+    res.setHeader('Allow', 'POST, OPTIONS');
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
@@ -51,8 +88,8 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Invalid request' });
   }
 
-  const company = String(body.company ?? '').trim();
-  if (company) return res.status(200).json({ ok: true });
+  const honeypot = String(body.website_url ?? body.company ?? '').trim();
+  if (honeypot) return res.status(200).json({ ok: true });
 
   const email = String(body.email ?? '').trim();
   if (!validEmail(email)) {

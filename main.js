@@ -25,12 +25,18 @@ document.querySelectorAll('.signup').forEach(form=>{
     btn.disabled=true;
     status.hidden=true;
     try{
-      const res=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,company:String(data.get('company')||'')})});
+      const res=await fetch('https://www.newwavestack.com/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,website_url:String(data.get('website_url')||''),company:String(data.get('company')||'')})});
       const body=await res.json().catch(()=>({}));
       if(res.ok&&body.ok){show("You're in. First issue lands Tuesday.",false);form.reset()}
-      else if(res.status===400)show(body.error||'Enter a valid email address.',true);
-      else show('Something went wrong. Try again.',true);
-    }catch{show('Something went wrong. Try again.',true)}
+      else{
+        console.error('subscribe',res.status,body);
+        if(res.status===400)show(body.error||'Enter a valid email address.',true);
+        else show('Something went wrong. Try again.',true);
+      }
+    }catch(err){
+      console.error('subscribe',err);
+      show('Could not reach the server. Check your connection and try again.',true);
+    }
     finally{btn.disabled=false}
   });
 });
