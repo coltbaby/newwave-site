@@ -3,9 +3,28 @@ const m=$('.menu'),l=$('#navlinks');
 m.addEventListener('click',()=>{const o=l.classList.toggle('open');m.setAttribute('aria-expanded',o)});
 l.addEventListener('click',e=>{if(e.target.tagName==='A'){l.classList.remove('open');m.setAttribute('aria-expanded',false)}});
 $('.signup').addEventListener('submit',e=>{e.preventDefault();e.target.querySelector('.ok').hidden=false});
-// rotating verdict word
-const w=[...document.querySelectorAll('[data-rot] b')];let i=0;w[0].classList.add('on');
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{w[i].classList.replace('on','out');const p=w[i];setTimeout(()=>p.classList.remove('out'),700);i=(i+1)%w.length;w[i].classList.add('on')},2200);
+// rotating verdict word: exit up and fade, enter from below, snap back with no transition
+const w=[...document.querySelectorAll('[data-rot] b')];let i=0;w[0].classList.add('is-active');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{
+  const cur=w[i],nxt=w[(i+1)%w.length];
+  cur.classList.replace('is-active','is-exit');
+  nxt.classList.add('is-active');
+  let snapped=false;
+  const snap=e=>{
+    if(e&&(e.target!==cur||e.propertyName!=='transform'))return;
+    if(snapped)return;
+    snapped=true;
+    cur.removeEventListener('transitionend',snap);
+    cur.classList.add('is-instant');
+    void cur.offsetWidth;
+    cur.classList.remove('is-exit');
+    void cur.offsetWidth;
+    cur.classList.remove('is-instant');
+  };
+  cur.addEventListener('transitionend',snap);
+  setTimeout(snap,780);
+  i=(i+1)%w.length;
+},2200);
 // hide nav on scroll down; condense the wordmark once past ~40px
 let y=0;const n=$('[data-nav]');
 const drops=[...document.querySelectorAll('.logo-drop')];

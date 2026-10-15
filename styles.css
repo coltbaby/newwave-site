@@ -31,9 +31,11 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 /* hero */
 .hero{padding-top:clamp(120px,15vw,220px);row-gap:clamp(40px,5vw,72px);padding-bottom:clamp(48px,6vw,96px)}
 .hero-verb{font-size:22px;letter-spacing:-.02em;font-weight:500;display:flex;gap:.35em;flex-wrap:wrap}
-.rot{position:relative;display:inline-block;height:1.2em;overflow:hidden;min-width:4.2em}
-.rot b{position:absolute;left:0;top:0;font-weight:600;transform:translateY(110%);transition:transform .7s var(--ease)}
-.rot b.on{transform:none}.rot b.out{transform:translateY(-110%)}
+.rot{position:relative;display:inline-block;height:1.2em;overflow:hidden;overflow:clip;min-width:4.2em}
+.rot b{position:absolute;left:0;top:0;font-weight:600;opacity:1;transform:translateY(110%);transition:transform .7s var(--ease),opacity .7s var(--ease)}
+.rot b.is-active{transform:none}
+.rot b.is-exit{opacity:0;transform:translateY(-110%)}
+.rot b.is-instant{transition:none}
 .v-use{color:var(--use)}.v-skp{color:var(--skp)}.v-wat{color:var(--wat)}
 .hero-lede{font-size:22px;line-height:1.25;letter-spacing:-.02em;max-width:30ch}
 /* art plates: original CSS compositions standing in for tool output */
