@@ -90,7 +90,7 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 /* plate wrapper overflow for scale */
 .item .art{display:block}
 .item-link{overflow:hidden}
-/* in action */
+/* case study */
 .dim{color:#5c5c58}
 .act-cta{margin:22px 0 16px}
 .previews{display:grid;grid-template-columns:1fr 1fr;gap:8px}
