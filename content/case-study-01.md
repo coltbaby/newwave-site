@@ -1,12 +1,23 @@
-# Case Study Nº 01 — Brand-refresh social campaign (DTC)
-**Access:** Paid members only · **Status:** Sample (anonymized, fictional brief)  
+# Case Study Nº 01 — How New Wave uses AI agents to win Backstop clients
+**Access:** Public teaser on the homepage. Full breakdown is Paid.  
+**Status:** Live from week 1. Every public count is an em dash until the week produces a real number. Do not invent counts.  
+**Drafted:** Oct 16, 2026
+
+The homepage teaser is this case study. Later case studies come from Paid-member briefs.
+
+The DTC brand-refresh writeup below is a retired format sample. It is not Case Study Nº 01.
+
+---
+
+# Retired format sample — Brand-refresh social campaign (DTC)
+**Access:** Not published · **Status:** Retired sample (fictional brief)  
 **Drafted:** Oct 15, 2026
 
 > **Disclaimer:** This is a **sample** Case Study written to show format and depth until a real Paid member opts in with a live brief. It is fictional but realistic. It is **not** a client engagement, **not** a hands-on lab result from New Wave, and **not** an endorsement of any tool. Verdicts cited below are early editorial calls (see `tools.json`). When a real member brief ships, this sample is replaced or clearly archived.
 
 ---
 
-## Public teaser (homepage — 2 sentences)
+## Retired public teaser (not on the homepage)
 
 Case Study Nº 01 walks a DTC brand-refresh social campaign from brief to export: which tools earned Use, which got cut, and what a creative director still had to fix by hand. Full prompts, rejects, and file notes are for Paid members — this is a sample until a real member brief opts in.
 

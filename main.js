@@ -41,8 +41,9 @@ document.querySelectorAll('.signup').forEach(form=>{
   });
 });
 // rotating verdict word: exit up and fade, enter from below, snap back with no transition
-const w=[...document.querySelectorAll('[data-rot] b')];let i=0;w[0].classList.add('is-active');
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{
+const w=[...document.querySelectorAll('[data-rot] b')];let i=0;
+if(w.length)w[0].classList.add('is-active');
+if(w.length&&!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{
   const cur=w[i],nxt=w[(i+1)%w.length];
   cur.classList.replace('is-active','is-exit');
   nxt.classList.add('is-active');
