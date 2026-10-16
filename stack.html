@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Stack preview — New Wave (Paid)</title>
+<meta name="description" content="Preview of the Paid Weekly Stack: Use / Skip / Watch verdicts on AI tools for professional designers. Not live.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="canonical" href="https://newwavestack.com/stack.html">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.preview-banner{background:var(--ink);color:var(--bg);padding:14px var(--pad);font-size:13px;letter-spacing:.04em;text-transform:uppercase;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.preview-banner a{color:var(--bg);border-bottom:1px solid rgba(245,245,242,.4)}
+.nav{position:relative;mix-blend-mode:normal;color:var(--ink);background:var(--bg)}
+.logo-drop{max-width:none}
+.stack-page .cap h2{font-size:14px;font-weight:600;letter-spacing:0}
+.stack-page{padding-top:clamp(48px,6vw,88px)}
+.stack-page .work{row-gap:clamp(40px,5vw,80px)}
+.stack-page .item .note{opacity:1;transform:none;max-width:52ch}
+.stack-page .item:nth-child(2){margin-top:0}
+.stack-page .item:nth-child(n){margin-top:0}
+.stack-lead{padding-bottom:clamp(28px,4vw,48px)}
+.stack-lead .legend{margin-top:18px}
+.stack-lead .fine{margin-top:10px;max-width:72ch}
+.stack-page .detail{margin-top:14px;max-width:62ch;font-size:14px;color:var(--mute)}
+.stack-page .detail b{color:var(--ink);font-weight:500}
+.stack-page .detail li{padding:3px 0 3px 0}
+.stack-page .price{margin-top:8px;font-size:13px;color:var(--mute);max-width:62ch}
+</style>
+</head>
+<body>
+<a class="skiplink" href="#stack">Skip to the stack</a>
+<div class="preview-banner">
+  <span>Preview — Paid members area (not live)</span>
+  <a href="/">Back to the site</a>
+</div>
+<header class="nav" data-nav>
+  <a href="/" class="logo" aria-label="New Wave">N<span class="logo-drop">e</span>w<span class="logo-drop">&nbsp;</span>W<span class="logo-drop">a</span>v<span class="logo-drop">e</span><sup>®</sup></a>
+</header>
+<main id="stack" class="stack-page">
+  <header class="sec-h grid stack-lead">
+    <h1 id="stack-h" class="c-1-8 h-l">Weekly Stack</h1>
+    <p class="c-1-12 legend" aria-label="Verdict legend">
+      <span><b class="v-use">Use:</b> worth adding to your stack now.</span>
+      <span><b class="v-skp">Skip:</b> not worth your time or money.</span>
+      <span><b class="v-wat">Watch:</b> promising, not ready yet.</span>
+    </p>
+    <p class="c-1-12 fine" id="early-note">Early verdicts. First looks from public docs and pricing, checked Oct 15, 2026. Hands-on tests are in progress. Not yet run on a full creative-director brief.</p>
+  </header>
+  <div class="work grid" id="stack-list" aria-live="polite"></div>
+</main>
+<footer class="foot">
+  <p class="fine foot-fine">© 2026 New Wave · Preview only · Verdicts are early and independent.</p>
+</footer>
+<script>
+(function(){
+  var arts=['art-2','art-3','art-4','art-1'];
+  var verdictClass={Use:'v-use',Skip:'v-skp',Watch:'v-wat'};
+  var list=document.getElementById('stack-list');
+  var note=document.getElementById('early-note');
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function items(arr){return (arr||[]).map(function(x){return '<li>'+esc(x)+'</li>'}).join('')}
+  fetch('/data/tools.json')
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+    .then(function(data){
+      if(data.disclaimer)note.textContent=data.disclaimer;
+      var tools=data.tools||[];
+      if(!tools.length){list.innerHTML='<p class="c-1-12 meta">No tools in this directory yet.</p>';return}
+      list.innerHTML=tools.map(function(t,i){
+        var v=verdictClass[t.verdict]||'v-wat';
+        var price=t.price?'<p class="price">'+esc(t.price)+'</p>':'';
+        return '<article class="item c-1-12 reveal">'
+          +'<a class="item-link" href="'+esc(t.url)+'" target="_blank" rel="noopener">'
+          +'<div class="art '+arts[i%arts.length]+'" role="img" aria-label="Abstract artwork"></div>'
+          +'<div class="cap"><h2>'+esc(t.name)+'</h2><span class="v '+v+'">'+esc(t.verdict)+'</span><span class="job">'+esc(t.category)+'</span></div>'
+          +'<span class="lbl">Early verdict</span>'
+          +'<p class="note">'+esc(t.summary)+'</p>'
+          +'<span class="sr">Opens in a new tab.</span></a>'
+          +'<p class="detail"><b>For.</b> '+esc(t.whoFor)+'</p>'
+          +'<ul class="detail"><li><b>Strengths.</b></li>'+items(t.strengths)+'</ul>'
+          +'<ul class="detail"><li><b>Weaknesses.</b></li>'+items(t.weaknesses)+'</ul>'
+          +price
+          +'</article>';
+      }).join('');
+      document.querySelectorAll('#stack-list .reveal').forEach(function(el){el.classList.add('in')});
+    })
+    .catch(function(){
+      list.innerHTML='<p class="c-1-12 meta">The directory did not load. Refresh to try again.</p>';
+    });
+})();
+</script>
+</body>
+</html>
