@@ -1,13 +1,24 @@
 # New Wave
 
-> The AI stack for professional designers. Every week, New Wave tests new AI tools on real creative jobs (logo, social, ads, web, thumbnails) and gives a creative director's verdict: Use, Skip, or Watch. Run by creative directors in the United States.
+> AI speeds up the work. Understanding people, culture & craft sets us apart. The site has two sections: NwWv Agency & Consulting, and the Design Resource. Run by creative directors in the United States.
 
-## Offers
-- Creative AI Stack newsletter (weekly, Tuesdays): free top 3 verdicts; paid $12/mo or $120/yr (founding $8/mo for first 100); student $5/mo or $48/yr. The full Weekly Stack is for Paid members.
-- Case Study (monthly, Paid tier only): a real brief from a Paid member who opts in, run through the stack with a creative director, published as a case study (tools, prompts, what worked, what didn't, final outputs). Briefs are shared with permission and can be anonymized. Paid members can submit a brief. Not included with Free or Student.
-- Agent recipe library: tested n8n, Zapier, and Claude workflows, $29-99 each, bundles $99-149, Recipe Club $20/mo. Paid members save 30% on every recipe.
-- Backstop by New Wave (done-for-you studio): Core $600/mo, Plus $1,000/mo, Premium $1,500/mo, plus $500 setup. Roster capped at 8 clients. Full Agency $9,500/mo plus $2,500 setup, limited to 2 clients.
-- For sponsors: labeled featured listings and newsletter sponsor slots.
+## NwWv Agency & Consulting
+Paid social creative for Meta and TikTok, grounded in real audience insight. Fewer, better ads, tested until they cut through the noise. Hiring the studio is not part of membership. Inquire at the form on the homepage. The studio replies by email. The form does not email the inquirer automatically.
+
+- Creative Audit, $750. Start here. Up to 20 Meta and TikTok ads, each marked cut, keep, make, or test. Three test briefs, a 10-minute recorded walkthrough, and a 30-minute call. 5 business days. The full fee counts toward setup and the first month if Backstop starts within 30 days.
+- Backstop retainers. Core $600/mo (12 paid-social ads and 10 variants, 2 channels, creative director sign-off). Plus $1,000/mo (20 ads and 25 variants, 3 channels, creative director sign-off). Premium $1,500/mo (everything in Plus, plus a monthly campaign concept, a web or landing-page refresh, a monthly creative director note, and a short kickoff call). $500 setup on Core, Plus, and Premium. Roster capped at 8 clients.
+- Full Agency $9,500/mo plus $2,500 setup, limited to 2 clients. Brand strategy and identity stewardship, monthly content calendar across 3–4 platforms, paid ad creative with weekly refreshes, website and landing-page updates, email and newsletter design, a monthly campaign concept, monthly performance report, one monthly strategy call, 2-business-day turnaround. Media spend and ad account management are not included.
+- Launch Round, $1,800. One concept, three angles, 6–8 test ads, a 2-week test plan, and a winner readout. Ads in 2 weeks. Setup fee waived if they continue.
+- AI Creative Workflow Setup, $3,500. Workshop only, $1,500. The team keeps making the ads. Tool picks, prompt and brand library, QA checklist, sign-off steps, testing cadence, live training. 3 weeks.
+- Creative Director Advisory, $1,500/mo. Two calls a month, written feedback on up to 10 concepts a week, and a monthly keep / kill / next note.
+- Process: Insight (human, audience and culture), Make (agent), Test (agent), Pick (human), Refresh (human).
+
+## The Design Resource
+The AI stack for professional designers. Weekly Use / Skip / Watch verdicts, membership, and agent recipes.
+
+- Creative AI Stack newsletter (weekly, Tuesdays): free top 3 verdicts; paid $12/mo or $120/yr (founding $8/mo for first 100); student $5/mo or $48/yr. Paid includes the Weekly Stack, Case Studies, and 30% off Agent Recipes. The public Weekly Stack is a teaser. The full stack is Paid.
+- Case Study Nº 01: how New Wave uses AI agents to win Backstop clients. Public counts are unpublished (shown as em dashes, live from week 1). The full breakdown is Paid. Later case studies come from Paid-member briefs. Not included with Free or Student. The case study is separate from the Backstop offers.
+- Agent recipe library: outlined n8n, Zapier, and Claude workflows, not yet tested, $29-99 each, bundles $99-149, Recipe Club $20/mo. Paid members save 30% on every recipe.
 
 ## Editorial independence
 - Verdicts are never for sale. No pay-to-remove.
