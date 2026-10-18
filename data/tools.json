@@ -1,422 +1,308 @@
 {
-  "generated": "2026-10-14",
-  "disclaimer": "All verdicts are drafts from public documentation and need a hands-on creative-director test before publishing. No test results, quotes, stats or testimonials are included.",
+  "generated": "2026-10-15",
+  "disclaimer": "All verdicts are early editorial calls from public documentation and pricing. early:true means not yet run on a full New Wave creative-director brief. No fabricated test results, quotes, stats, or testimonials.",
+  "header": "The AI stack for professional designers.",
+  "positioning": "NwWv is an AI-integrated design agency, weekly newsletter, and active community for today's creative professional figuring out a new generation of tools.",
   "tools": [
     {
       "id": "recraft",
       "name": "Recraft",
-      "job": "Logo / branding",
-      "good_for": "Generates true editable vector (SVG) marks and icon sets, with custom brand styles.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It's one of the few generators that hands you real vectors instead of a PNG you have to retrace, which is what a logo job actually needs. Treat outputs as sketches to refine in Illustrator, not finished marks.",
-      "price": "Free (public, non-commercial); Basic $10/mo, Pro $16/mo, Teams $18/seat/mo (billed annually). API from $0.08 per vector image.",
-      "price_checked": "2026-10-14",
       "url": "https://www.recraft.ai",
+      "category": "Logo",
+      "verdict": "Use",
+      "early": true,
+      "summary": "One of the few generators that returns real, editable SVG instead of a PNG to retrace. Custom styles lock a visual language so icon sets and marks stay consistent. Treat every output as a sketch to finish in Illustrator.",
+      "whoFor": "Identity and brand designers who need a mark, icon set, or pattern system in vector, quickly.",
+      "strengths": [
+        "Native SVG / vector output",
+        "Custom styles for brand-consistent families",
+        "V4.1 Flash for fast cheap iteration; Refine when something is worth keeping",
+        "Studio now hosts other labs' models (e.g. ChatGPT Images, Seedance) alongside Recraft models"
+      ],
+      "weaknesses": [
+        "Output is a starting file, not a finished mark (curves, kerning, anchors still need craft)",
+        "Free plan: images are public, not licensed for commercial use"
+      ],
+      "price": "Basic $12/mo or $10/mo annual; Pro from $20/mo or $16 annual; Teams from $22/mo or $18/seat annual. API Flash $0.007; V4.1 vector $0.08.",
+      "priceChecked": "2026-10-15",
       "sources": [
         "https://www.recraft.ai/pricing",
         "https://www.recraft.ai/docs/plans-and-billing/credits",
         "https://www.recraft.ai/docs/api-reference/pricing"
-      ],
-      "notes": "Free-plan images are public and not licensed for commercial use."
+      ]
     },
     {
       "id": "ideogram",
       "name": "Ideogram",
-      "job": "Logo / typography, social",
-      "good_for": "Image generation with reliable in-image text: wordmarks, posters, type-led social graphics.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "When the job lives or dies on legible type, it's the generator to start with. Expect raster output, so a wordmark still needs vectorizing and kerning by hand.",
-      "price": "Free 30 credits/week (Google/Apple/Microsoft sign-in); Plus $20/mo ($15 annual), Pro $60/mo ($42 annual), Team $30/user/mo ($20 annual).",
-      "price_checked": "2026-10-14",
       "url": "https://ideogram.ai",
+      "category": "Type",
+      "verdict": "Use",
+      "early": true,
+      "summary": "When the job lives or dies on legible type, start here. Expect raster output, so a wordmark still needs vectorizing and kerning by hand.",
+      "whoFor": "Designers making wordmarks, posters, and type-led social graphics.",
+      "strengths": [
+        "Reliable in-image text compared with most generators",
+        "Useful for posters and social where the words are the layout",
+        "API available for a workflow once the look is approved"
+      ],
+      "weaknesses": [
+        "Raster, not vector",
+        "A wordmark still needs a designer's kerning and outlines"
+      ],
+      "price": "Free 30 credits/week (Google, Apple, or Microsoft sign-in). Plus $20/mo ($15 annual), Pro $60/mo ($42 annual), Team $30/user/mo ($20 annual).",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://docs.ideogram.ai/plans-and-billing/available-plans",
         "https://ideogram.ai/pricing/"
-      ],
-      "notes": null
+      ]
     },
     {
       "id": "looka",
       "name": "Looka",
-      "job": "Logo / branding",
-      "good_for": "Template-driven logo maker that sells logo files and brand-kit templates to small businesses.",
-      "verdict": "Skip",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It's built for founders who don't have a designer, not for designers. You'd be paying $65 for a starting point that's weaker than a 20-minute sketch.",
-      "price": "Free to design and preview; Basic logo $20 one-time (one low-res PNG); Premium $65 one-time (hi-res + vector); Brand Kit $96/yr.",
-      "price_checked": "2026-10-14",
       "url": "https://looka.com",
+      "category": "Logo",
+      "verdict": "Skip",
+      "early": true,
+      "summary": "A template-driven logo maker for founders who don't have a designer. Paying for the files buys a starting point weaker than a short sketch.",
+      "whoFor": "Not for working designers. Built for small businesses buying a logo file and a brand-kit template.",
+      "strengths": [
+        "Fast preview if a non-designer needs any mark at all",
+        "One-time file purchase instead of a subscription"
+      ],
+      "weaknesses": [
+        "Template logic, not art direction",
+        "The paid files are still a starting point a designer would redraw",
+        "Confirm looka.com/pricing before publishing; figures below come from Looka's help pages and a third-party summary"
+      ],
+      "price": "Free to design and preview. Basic logo $20 one-time (one low-res PNG). Premium $65 one-time (hi-res + vector). Brand Kit $96/yr.",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://looka.com/pricing/",
         "https://help.looka.com/en/articles/1370653-is-this-logo-free"
-      ],
-      "notes": "Pricing confirmed via Looka help page and a third-party summary; open looka.com/pricing to check before publishing."
+      ]
     },
     {
       "id": "midjourney",
-      "name": "Midjourney (V7 images)",
-      "job": "Thumbnails / imagery",
-      "good_for": "Art-directed image generation with strong aesthetics, style and omni references.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Still the fastest way to explore a look before you commit to a shoot or an illustrator. No API and a public gallery unless you pay for Pro, so budget for Pro on client work.",
-      "price": "Basic $10/mo, Standard $30, Pro $60, Mega $120 (20% off annual). No free tier. Stealth (private) mode Pro+ only.",
-      "price_checked": "2026-10-14",
+      "name": "Midjourney",
       "url": "https://www.midjourney.com",
+      "category": "Image",
+      "verdict": "Use",
+      "early": true,
+      "summary": "Still the fastest way to explore a look before you commit to a shoot or an illustrator. Budget for Pro on client work: there is no API, and the gallery is public unless you pay for stealth.",
+      "whoFor": "Art directors exploring style, references, and campaign looks.",
+      "strengths": [
+        "Strong aesthetics and style references",
+        "Fast look-development before a shoot or an illustrator",
+        "Omni reference for holding a direction across frames"
+      ],
+      "weaknesses": [
+        "No API",
+        "Public gallery unless you are on Pro or Mega (stealth)",
+        "Plan docs say companies with more than $1M gross revenue a year need Pro or Mega; check the terms before publishing",
+        "The video mode is a separate, weaker call and is not why this verdict is Use"
+      ],
+      "price": "Basic $10/mo, Standard $30, Pro $60, Mega $120 (20% off annual). No free tier.",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
-      ],
-      "notes": "Midjourney's terms require Pro or Mega for companies with more than $1M gross revenue a year (per plan docs); check the ToS before publishing."
-    },
-    {
-      "id": "midjourney-video",
-      "name": "Midjourney Video",
-      "job": "Video",
-      "good_for": "Animates a Midjourney still into short clips (SD 480p; HD 720p on Standard+).",
-      "verdict": "Skip",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Fine for a moodboard, but it's image-to-video only with low resolution and short clips, so it can't stand in for a client deliverable. Use a dedicated video tool.",
-      "price": "Included in Midjourney plans; uses GPU time (batch of 4 SD clips is about 8 min, HD about 26 min).",
-      "price_checked": "2026-10-14",
-      "url": "https://www.midjourney.com",
-      "sources": [
-        "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
-      ],
-      "notes": "Skip covers client video use only, not the image product."
+      ]
     },
     {
       "id": "adobe-firefly",
       "name": "Adobe Firefly",
-      "job": "Digital ads, imagery",
-      "good_for": "Adobe's generative suite (image, video, vector, Generative Fill), plus partner models (Gemini, GPT Image, FLUX, Ideogram, Runway, Kling) in one place inside Creative Cloud.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "If you already live in Photoshop and Illustrator, it's the least disruptive way to add generative work to client ads. Adobe's own Firefly models are the conservative pick for commercial use. Partner models carry their own terms, and some aren't available on business plans yet.",
-      "price": "Free tier; Standard $9.99/mo (2,000 credits), Pro $19.99, Pro Plus $49.99, Premium $199.99. Standard generations are unlimited on paid plans; premium/partner features use credits.",
-      "price_checked": "2026-10-14",
       "url": "https://www.adobe.com/products/firefly.html",
+      "category": "Image",
+      "verdict": "Use",
+      "early": true,
+      "summary": "If you already live in Photoshop and Illustrator, this is the least disruptive way to add generative work to client ads. Adobe's own Firefly models are the conservative pick for commercial use.",
+      "whoFor": "Designers already in Creative Cloud who need image, vector, and Generative Fill inside the files they deliver.",
+      "strengths": [
+        "Generative Fill, text to vector, and image tools inside the apps you already hand off from",
+        "Adobe's own models are the clearer commercial-use path",
+        "Partner models (Gemini, GPT Image, FLUX, Ideogram, Runway, Kling) available in one place"
+      ],
+      "weaknesses": [
+        "Partner models carry their own terms, and some are not on business plans yet",
+        "Plan prices below are from a third-party summary; check adobe.com before publishing"
+      ],
+      "price": "Free tier. Standard $9.99/mo (2,000 credits), Pro $19.99, Pro Plus $49.99, Premium $199.99. Standard generations are unlimited on paid plans; premium and partner features use credits.",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html",
         "https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html",
         "https://www.adobe.com/products/firefly/partner-models.html"
-      ],
-      "notes": "Plan prices are from a third-party summary (saascrmreview.com); check adobe.com/products/firefly/plans before publishing."
-    },
-    {
-      "id": "krea",
-      "name": "Krea",
-      "job": "Imagery / concepting",
-      "good_for": "Real-time generation canvas, multi-model image and video, upscaling and custom training.",
-      "verdict": "Watch",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "The real-time canvas is a real ideation tool for art directors. But it's an aggregator of other labs' models, so quality depends on whichever model you pick. We'll retest once we've run it on a full brief.",
-      "price": "Free 100 units/day; Basic $9/mo, Pro $35/mo, Max $105/mo, Business $200/mo (about 40% off annual).",
-      "price_checked": "2026-10-14",
-      "url": "https://www.krea.ai",
-      "sources": [
-        "https://www.krea.ai/pricing"
-      ],
-      "notes": null
-    },
-    {
-      "id": "canva-ai",
-      "name": "Canva AI (Magic Studio)",
-      "job": "Social content",
-      "good_for": "Brand-kit-aware templates, Magic Resize, and AI generation/editing for high-volume social sets.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "For a 6-to-60 post social calendar with a brand kit, nothing in-house moves faster. Use it for production and resizing, not for concepting the brand itself.",
-      "price": "Free plan; Pro US$144/yr per person (US pricing, Sept 2026); AI use limits by tier (Premium/Ultra AI uses).",
-      "price_checked": "2026-10-14",
-      "url": "https://www.canva.com/canva-ai/",
-      "sources": [
-        "https://www.canva.com/pricing/",
-        "https://www.canva.com/help/ai-access/",
-        "https://pricingsaas.com/companies/canva/diffs/2026W38"
-      ],
-      "notes": "Canva changed Pro pricing and free AI limits in Sept 2026; check exact AI-use counts on canva.com/pricing."
-    },
-    {
-      "id": "pomelli",
-      "name": "Google Pomelli",
-      "job": "Social content",
-      "good_for": "Google Labs experiment that reads your website for a 'Business DNA' and generates on-brand social campaigns and ad assets.",
-      "verdict": "Watch",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It's interesting because it pulls brand context automatically. But it's a Labs experiment aimed at small businesses, not designers, and its output control is limited. We're watching to see if it leaves Labs.",
-      "price": "Free (Google Labs experiment); availability limited by country.",
-      "price_checked": "2026-10-14",
-      "url": "https://pomelli.withgoogle.com",
-      "sources": [
-        "https://blog.google/innovation-and-ai/models-and-research/google-labs/pomelli/",
-        "https://support.google.com/labs/answer/16945066?hl=en"
-      ],
-      "notes": "The official URL pomelli.withgoogle.com comes from Google's blog; check that it loads."
+      ]
     },
     {
       "id": "adcreative-ai",
       "name": "AdCreative.ai",
-      "job": "Digital ads",
-      "good_for": "Generates and 'scores' ad creatives at volume from a brand kit.",
-      "verdict": "Skip",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Reviews keep saying the output is generic, and the 'conversion score' is a claim we can't verify. Credit pricing gets steep fast, and trial-billing complaints are common. Designers get better variants from Firefly or Canva with real art direction.",
-      "price": "Trial 7 days / 10 credits; plans from $39/mo (20 credits) up to $999/mo; discounts on quarterly/annual billing.",
-      "price_checked": "2026-10-14",
       "url": "https://www.adcreative.ai",
-      "sources": [
-        "https://adsgen.ai/blog/adcreative-ai-pricing",
-        "https://www.g2.com/products/adcreative-ai/reviews",
-        "https://www.trustpilot.com/review/adcreative.ai"
+      "category": "Ads",
+      "verdict": "Skip",
+      "early": true,
+      "summary": "Built for volume, not craft. Output reads templated, credits get pricey per download, and its conversion score isn't something we can verify. Designers get better variants from Firefly or Canva with real art direction.",
+      "whoFor": "Not a designer's production tool. Aimed at people who want scored ad volume from a brand kit.",
+      "strengths": [
+        "Fast volume from a brand kit if craft is not the point"
       ],
-      "notes": "Pricing comes from a third-party (competitor) blog. Check adcreative.ai/pricing directly. Don't quote any review stats."
+      "weaknesses": [
+        "Output reads templated",
+        "Credits get pricey as downloads add up",
+        "The conversion score is a claim we cannot verify",
+        "No clean /pricing URL. Plan rungs are cited at $39, $249, and $999; Starter credit counts disagree across sources (10 vs 20). Confirm on send day"
+      ],
+      "price": "Trial cited as 7 days. Plans cited from $39/mo up to $999/mo, with discounts on longer billing. Do not publish the credit count until it is confirmed on the vendor's own page.",
+      "priceChecked": "2026-10-15",
+      "sources": [
+        "https://www.adcreative.ai"
+      ]
+    },
+    {
+      "id": "canva-ai",
+      "name": "Canva AI",
+      "url": "https://www.canva.com/canva-ai/",
+      "category": "Social",
+      "verdict": "Use",
+      "early": true,
+      "summary": "For a high-volume social calendar with a brand kit, nothing in-house moves faster. Use it for production and resizing, not for concepting the brand itself.",
+      "whoFor": "Designers producing and resizing social sets from an existing brand kit.",
+      "strengths": [
+        "Brand Kit, Magic Resize, and template production at volume",
+        "Useful once the concept already exists"
+      ],
+      "weaknesses": [
+        "Not where a brand gets its point of view",
+        "Canva changed Pro pricing and free AI limits in Sept 2026; recheck AI-use counts on canva.com/pricing"
+      ],
+      "price": "Free plan. Pro US$144/yr per person (US pricing, Sept 2026). AI use limits depend on tier.",
+      "priceChecked": "2026-10-14",
+      "sources": [
+        "https://www.canva.com/pricing/",
+        "https://www.canva.com/help/ai-access/"
+      ]
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "url": "https://www.framer.com",
+      "category": "Web",
+      "verdict": "Use",
+      "early": true,
+      "summary": "It ships a real, responsive, hosted site that a designer fully controls, which most AI website builders do not. Wireframer gives you a starting layout. The craft stays with you.",
+      "whoFor": "Designers who need a hosted marketing site or landing page they can still design by hand.",
+      "strengths": [
+        "Designer-grade layout control plus hosting",
+        "Wireframer for a starting page, Workshop for AI components",
+        "The file remains editable after the prompt"
+      ],
+      "weaknesses": [
+        "AI credits are a starting boost, not the site",
+        "A generated layout still needs type, spacing, and content editing"
+      ],
+      "price": "Free (one-time 500 AI credits). Basic $10/mo, Pro $30/mo per site, billed annually.",
+      "priceChecked": "2026-10-14",
+      "sources": [
+        "https://www.framer.com/pricing",
+        "https://www.framer.com/help/articles/how-ai-credits-and-agents-pricing-work/"
+      ]
     },
     {
       "id": "figma-make",
       "name": "Figma Make",
-      "job": "Web design",
-      "good_for": "Prompt-to-prototype/app inside Figma, using your design files as context.",
-      "verdict": "Watch",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Great for clickable prototypes from existing frames, and it's already in a tool your team pays for. Generated code and layouts still need a designer's cleanup, and the AI credits can run out quickly on big iterations.",
-      "price": "Included with Figma Full seats (Professional plan about 3,000 AI credits/mo per Full seat); extra credits sold separately.",
-      "price_checked": "2026-10-14",
       "url": "https://www.figma.com/make/",
+      "category": "Web",
+      "verdict": "Watch",
+      "early": true,
+      "summary": "Useful for clickable prototypes from frames you already have, and it lives in a tool the team pays for. Generated layouts and code still need a designer's cleanup.",
+      "whoFor": "Product and brand teams who already work in Figma and want a prototype, not a shipped site.",
+      "strengths": [
+        "Uses existing Figma files as context",
+        "Included with Full seats, so there is no second subscription to trial the idea"
+      ],
+      "weaknesses": [
+        "Generated code and layout still need cleanup",
+        "AI credits can run out quickly on big iterations",
+        "Not a replacement for a designed, hosted page"
+      ],
+      "price": "Included with Figma Full seats (Professional plan about 3,000 AI credits/mo per Full seat). Extra credits sold separately.",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://www.figma.com/pricing/",
         "https://help.figma.com/hc/en-us/articles/33459875669015-How-Figma-AI-credits-work"
-      ],
-      "notes": null
-    },
-    {
-      "id": "framer",
-      "name": "Framer (Wireframer + Workshop)",
-      "job": "Web design",
-      "good_for": "Designer-grade site builder with AI page generation (Wireframer), AI components (Workshop), and hosting.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It ships a real, responsive, hosted site that a designer fully controls, which most 'AI website builders' don't. Wireframer gives you a starting layout, and the craft stays with you.",
-      "price": "Free (one-time 500 AI credits); Basic $10/mo, Pro $30/mo per site (annual).",
-      "price_checked": "2026-10-14",
-      "url": "https://www.framer.com",
-      "sources": [
-        "https://www.framer.com/pricing",
-        "https://www.framer.com/help/articles/how-ai-credits-and-agents-pricing-work/"
-      ],
-      "notes": null
+      ]
     },
     {
       "id": "runway",
       "name": "Runway",
-      "job": "Video",
-      "good_for": "Gen-4.5 / Gen-4 video, Aleph editing, references, 4K upscale, plus third-party models (Kling, Seedance, Nano Banana).",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It's the most complete production toolkit for short-form brand video, with editing and consistency controls beyond plain text-to-video. Credits go fast, so prototype in Turbo first.",
-      "price": "Free 125 one-time credits; Standard $12/mo, Pro $28/mo, Max $76/mo (annual). Gen-4.5 is 12 credits/sec.",
-      "price_checked": "2026-10-14",
       "url": "https://runwayml.com",
+      "category": "Video",
+      "verdict": "Use",
+      "early": true,
+      "summary": "The most complete production toolkit for short-form brand video: editing, references, and consistency controls beyond plain text-to-video. Credits go fast, so prototype before you render the finals.",
+      "whoFor": "Designers and directors making short brand films, product loops, and campaign motion.",
+      "strengths": [
+        "Gen-4.5 / Gen-4 video plus Aleph editing",
+        "References, 4K upscale, and third-party models in the same project",
+        "Closer to a timeline than a one-shot generator"
+      ],
+      "weaknesses": [
+        "Credits go fast. Gen-4.5 is 12 credits per second",
+        "The Unlimited plan is being retired; legacy subscribers move to Max on Nov 30, 2026"
+      ],
+      "price": "Free 125 one-time credits. Standard $12/mo, Pro $28/mo, Max $76/mo, billed annually.",
+      "priceChecked": "2026-10-14",
       "sources": [
         "https://runway.com/pricing",
         "https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work"
-      ],
-      "notes": "The Unlimited plan is being retired; legacy subscribers move to Max on Nov 30, 2026."
+      ]
     },
     {
       "id": "kling",
-      "name": "Kling AI (Kling 3.0)",
-      "job": "Video",
-      "good_for": "Text/image-to-video with native audio, multi-shot, up to 4K.",
-      "verdict": "Watch",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Its motion quality competes with the best. But first-month promo pricing and enterprise data questions mean we'd check the terms before putting client footage in. Adobe currently restricts Kling to individual plans only.",
-      "price": "Free basic tier; Standard $8.80/mo, Pro $32.56/mo, Premier $80.96/mo, Ultra $159.99/mo (lower intro first month).",
-      "price_checked": "2026-10-14",
+      "name": "Kling",
       "url": "https://kling.ai",
+      "category": "Video",
+      "verdict": "Watch",
+      "early": true,
+      "summary": "Motion quality competes with the best, with native audio and high resolution. Watch stands: as of Oct 15, 2026, Flash is limited early access and full 4.0 is still described as launching or rolling out this October.",
+      "whoFor": "Directors who want another motion option once access and data terms are clear. Not for client footage yet.",
+      "strengths": [
+        "Strong motion, native audio, multi-shot, up to 4K on the versions already described",
+        "Worth another look when 4.0 is actually generally available"
+      ],
+      "weaknesses": [
+        "Full 4.0 was not a finished public launch as of Oct 15, 2026",
+        "First-month promo pricing and enterprise data terms need a check before client footage goes in",
+        "Adobe currently restricts Kling to individual plans only"
+      ],
+      "price": "Free basic tier. Standard $8.80/mo, Pro $32.56/mo, Premier $80.96/mo, Ultra $159.99/mo, with a lower intro first month. Recheck kling.ai on send day; these figures are from public pages and may predate 4.0.",
+      "priceChecked": "2026-10-15",
       "sources": [
         "https://kling.ai/explore/kling_ai_pricing",
-        "https://kling.ai/blog/kling-video-3-0-credit-cost-guide",
         "https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html"
-      ],
-      "notes": null
+      ]
     },
     {
-      "id": "google-flow",
-      "name": "Google Flow (Veo 3.1)",
-      "job": "Video",
-      "good_for": "Google's filmmaking app on Veo 3.1: scene builder, ingredients-to-video, native audio.",
+      "id": "krea",
+      "name": "Krea",
+      "url": "https://www.krea.ai",
+      "category": "Image",
       "verdict": "Watch",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "Veo's realism and audio are strong. But Flow's credit costs scale steeply at Quality, and the best tier sits behind a $100+ Ultra plan. We want to see how consistent it is across a whole campaign.",
-      "price": "Google AI Pro $19.99/mo (1,000 Flow credits); Ultra from $99.99/mo; Veo 3.1 Quality is 100 credits per generation.",
-      "price_checked": "2026-10-14",
-      "url": "https://labs.google/flow",
+      "early": true,
+      "summary": "The real-time canvas is a genuine ideation tool for art directors. It is an aggregator of other labs' models, so the result depends on which model you pick. We will look again after it has been run on a full brief.",
+      "whoFor": "Art directors who want a live canvas for concepts, not a single-model pipeline.",
+      "strengths": [
+        "Real-time generation canvas",
+        "Multi-model image and video, upscaling, and custom training in one place"
+      ],
+      "weaknesses": [
+        "Quality tracks whichever underlying model you select",
+        "Not yet run on a full New Wave brief, so the verdict stays Watch"
+      ],
+      "price": "Free 100 units/day. Basic $9/mo, Pro $35/mo, Max $105/mo, Business $200/mo (about 40% off annual).",
+      "priceChecked": "2026-10-14",
       "sources": [
-        "https://support.google.com/flow/answer/16526234",
-        "https://one.google.com/about/google-ai-plans/"
-      ],
-      "notes": "Ultra $99.99 tier came from search synthesis; check one.google.com before publishing."
-    },
-    {
-      "id": "topaz",
-      "name": "Topaz Studio (Gigapixel / Photo / Video)",
-      "job": "Thumbnails / imagery, video",
-      "good_for": "AI upscaling, denoise, sharpen and video enhancement, local and cloud.",
-      "verdict": "Use",
-      "verdict_status": "draft: editorial call from public docs, pending creative-director hands-on test",
-      "rationale": "It's the finishing step for low-res AI output, and Adobe itself now licenses Topaz upscalers inside Photoshop. A subscription bundle has replaced perpetual licenses, so price it per project.",
-      "price": "Studio $69/mo, or $45/mo on an annual commitment, or $399/yr; Studio Pro $799/yr (full commercial use).",
-      "price_checked": "2026-10-14",
-      "url": "https://www.topazlabs.com",
-      "sources": [
-        "https://www.topazlabs.com/pricing",
-        "https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html"
-      ],
-      "notes": "Check whether the commercial-use terms on the base Studio tier cover client work."
-    }
-  ],
-  "shootout": {
-    "number": 1,
-    "status": "PENDING: not yet run; no scores exist",
-    "brief": "Logo + a 6-post social set for a fictional neighborhood coffee roaster.",
-    "brief_spec": {
-      "client": "Fictional: 'Low Hum Coffee Roasters', a one-shop neighborhood roaster",
-      "deliverables": [
-        "Primary logo + one-color version, delivered as vector",
-        "6 social posts (1080x1350): launch, origin story, menu item, event, behind-the-scenes, promo"
-      ],
-      "rules": [
-        "Same written brief and same 3 reference images for every tool",
-        "Max 60 minutes and 40 generations per tool",
-        "Human may only pick, prompt, crop and export; any manual vector cleanup is logged separately"
+        "https://www.krea.ai/pricing"
       ]
-    },
-    "contenders": [
-      {
-        "tool": "recraft",
-        "why": "Native vector logos + brand styles carried into social"
-      },
-      {
-        "tool": "ideogram",
-        "why": "Typography-led marks and text-heavy posts"
-      },
-      {
-        "tool": "adobe-firefly",
-        "why": "Text to Vector in Illustrator + Firefly/Express for the set"
-      },
-      {
-        "tool": "canva-ai",
-        "why": "Brand kit + Magic Studio for the 6-post set"
-      },
-      {
-        "tool": "looka",
-        "why": "Incumbent all-in-one logo maker as baseline"
-      }
-    ],
-    "rubric": [
-      {
-        "criterion": "Logo concept & distinctiveness",
-        "weight": 20
-      },
-      {
-        "criterion": "Logo craft (vector quality, scalability, 1-color)",
-        "weight": 20
-      },
-      {
-        "criterion": "Typography accuracy & legibility",
-        "weight": 15
-      },
-      {
-        "criterion": "Brand consistency across 6 posts",
-        "weight": 20
-      },
-      {
-        "criterion": "Editability / handoff (layers, files, formats)",
-        "weight": 10
-      },
-      {
-        "criterion": "Speed & cost to finish (time, credits, $)",
-        "weight": 10
-      },
-      {
-        "criterion": "Commercial-use clarity (license terms)",
-        "weight": 5
-      }
-    ],
-    "scale": "Each criterion 1-5 by the creative director, weighted to 100",
-    "scores": {
-      "recraft": "PENDING",
-      "ideogram": "PENDING",
-      "adobe-firefly": "PENDING",
-      "canva-ai": "PENDING",
-      "looka": "PENDING"
-    }
-  },
-  "recipes": [
-    {
-      "n": "01",
-      "title": "On-brand social post agent",
-      "price": "$29–99",
-      "tested": "PENDING: outline only, not yet tested",
-      "tools": [
-        "n8n (Cloud Starter €20–24/mo or self-host)",
-        "Claude API (Anthropic)",
-        "Ideogram API or Recraft API",
-        "Buffer API (Essentials, from $5–6/channel/mo)"
-      ],
-      "steps": [
-        "Store the brand kit (voice doc, palette hex, fonts, logo SVG, 5 approved reference posts) in a Google Drive folder or Notion page",
-        "n8n Schedule trigger (weekly) reads the content calendar rows from a Google Sheet",
-        "Claude node writes each post's caption + image prompt, with the voice doc and references as system context; JSON output",
-        "HTTP node calls Ideogram (text in image) or Recraft (brand style ID) to generate 2 options per post",
-        "Approval gate: send options to Slack/email with approve/reject buttons (n8n Wait node, webhook resume); a human must approve",
-        "On approve, upload to Buffer via API as a scheduled post; write status back to the Sheet"
-      ],
-      "sources": [
-        "https://n8n.io/pricing/",
-        "https://developers.buffer.com/guides/api-limits.html",
-        "https://www.recraft.ai/docs/api-reference/pricing",
-        "https://docs.ideogram.ai/plans-and-billing/available-plans"
-      ]
-    },
-    {
-      "n": "02",
-      "title": "Ad variant generator",
-      "price": "$29–99",
-      "tested": "PENDING: outline only, not yet tested",
-      "tools": [
-        "n8n or Zapier",
-        "Claude API",
-        "Recraft API (style ID, remove background, outpaint) or Adobe Firefly Services API (enterprise)",
-        "ImageMagick / sharp for exact crops"
-      ],
-      "steps": [
-        "Input: one approved hero concept (image + headline + CTA) dropped in a Drive folder",
-        "Claude generates N headline/CTA variants within character limits per placement",
-        "Image API outpaints/extends the hero to each aspect ratio (1:1, 4:5, 9:16, 1.91:1)",
-        "Code node composites type and logo with sharp/ImageMagick from a fixed template (no AI-rendered type)",
-        "Contact sheet sent for creative-director approval; approved files exported with placement-named filenames"
-      ],
-      "sources": [
-        "https://www.recraft.ai/docs/api-reference/pricing"
-      ],
-      "notes": "Firefly Services API is enterprise-only; check access before listing it as the default."
-    },
-    {
-      "n": "03",
-      "title": "Bundles",
-      "price": "$99–149",
-      "tested": "n/a",
-      "content": "Grouped by creative job: Social bundle (01 + caption bank prompts), Ads bundle (02 + sizing template), Launch bundle (01 + 02 + Framer landing-page prompt pack)."
-    },
-    {
-      "n": "04",
-      "title": "Recipe Club",
-      "price": "$20/mo",
-      "tested": "n/a",
-      "content": "Every recipe, plus a changelog when a model or API price changes (e.g., Runway Unlimited→Max on Nov 30, 2026)."
     }
   ]
 }
