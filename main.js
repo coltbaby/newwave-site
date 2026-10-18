@@ -1,3 +1,5 @@
+const hashAlias={'#studio':'#agency','#backstop':'#agency'};
+if(hashAlias[location.hash])history.replaceState(null,'',hashAlias[location.hash]);
 const $=s=>document.querySelector(s);
 const m=$('.menu'),l=$('#navlinks'),n=$('[data-nav]');
 const setMenu=open=>{
@@ -35,6 +37,60 @@ document.querySelectorAll('.signup').forEach(form=>{
       }
     }catch(err){
       console.error('subscribe',err);
+      show('Could not reach the server. Check your connection and try again.',true);
+    }
+    finally{btn.disabled=false}
+  });
+});
+const setInquiry=(interest,plan)=>{
+  const form=$('.inquiry');
+  if(!form)return;
+  const sel=form.querySelector('[name=interest]');
+  const planEl=form.querySelector('[name=plan]');
+  if(sel&&[...sel.options].some(o=>o.value===interest))sel.value=interest;
+  if(planEl)planEl.value=plan||'';
+};
+addEventListener('click',e=>{
+  const a=e.target.closest('[data-interest]');
+  if(!a)return;
+  setInquiry(a.getAttribute('data-interest')||'',a.getAttribute('data-plan')||'');
+});
+document.querySelectorAll('.inquiry').forEach(form=>{
+  const status=form.querySelector('.ok');
+  const btn=form.querySelector('button[type=submit]');
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const data=new FormData(form);
+    const payload={
+      name:String(data.get('name')||'').trim(),
+      email:String(data.get('email')||'').trim(),
+      brand:String(data.get('brand')||'').trim(),
+      link:String(data.get('link')||'').trim(),
+      interest:String(data.get('interest')||'').trim(),
+      budget:String(data.get('budget')||'').trim(),
+      message:String(data.get('message')||'').trim(),
+      plan:String(data.get('plan')||'').trim(),
+      website_url:String(data.get('website_url')||'')
+    };
+    const show=(msg,err)=>{status.hidden=false;status.textContent=msg;status.classList.toggle('is-err',err)};
+    if(!payload.name){show('Enter your name.',true);return}
+    if(!emailOk(payload.email)){show('Enter a valid email address.',true);return}
+    if(!payload.brand){show('Enter a brand or company.',true);return}
+    if(!payload.link){show('Enter a website or social link.',true);return}
+    if(!payload.interest){show('Choose an interest.',true);return}
+    btn.disabled=true;
+    status.hidden=true;
+    try{
+      const res=await fetch('https://www.newwavestack.com/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+      const body=await res.json().catch(()=>({}));
+      if(res.ok&&body.ok){form.reset();show('Received. The studio will reply to this email.',false)}
+      else{
+        console.error('inquiry',res.status,body);
+        if(res.status===400)show(body.error||'Check the form and try again.',true);
+        else show('Something went wrong. Try again.',true);
+      }
+    }catch(err){
+      console.error('inquiry',err);
       show('Could not reach the server. Check your connection and try again.',true);
     }
     finally{btn.disabled=false}
