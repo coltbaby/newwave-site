@@ -25,7 +25,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -64,24 +64,32 @@
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero-stage">
     <h1 id="hero-h" class="hero-type" aria-label="AI speeds up the work. Understanding people, culture &amp; craft sets us apart.">
-      <span class="l l1" aria-hidden="true">AI speeds up the</span>
-      <span class="l l2" aria-hidden="true">work.</span>
-      <span class="l l3" aria-hidden="true">Under-</span>
-      <span class="l l4" aria-hidden="true">standing</span>
-      <span class="l l5" aria-hidden="true">people, culture &amp; craft</span>
-      <span class="l l6" aria-hidden="true">sets us apart.</span>
+      <span class="l l-ai" aria-hidden="true">AI speeds</span>
+      <span class="l l-up" aria-hidden="true">up the</span>
+      <span class="l l-work" aria-hidden="true">work.</span>
+      <span class="l l-under" aria-hidden="true">Under-</span>
+      <span class="l l-stand" aria-hidden="true">standing</span>
+      <span class="l l-people" aria-hidden="true">people, culture &amp; craft</span>
+      <span class="l l-sets" aria-hidden="true">sets us apart.</span>
     </h1>
     <form id="subscribe" class="signup hero-square" action="https://www.newwavestack.com/api/subscribe" method="post" aria-label="Design Resource signup">
-      <p class="sq-label"><i></i> The Design Resource</p>
-      <p class="pitch">The AI Stack for Professional Designers. Weekly Tool Critiques, AI Agent Workflows, and Community Case Studies.</p>
-      <label for="email" class="sr">Email address</label>
-      <input class="hp" type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="join-row">
-        <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email" maxlength="254">
-        <button type="submit">Join</button>
+      <div class="sq-top">
+        <p class="sq-label"><i></i>THE DESIGN RESOURCE</p>
+        <div class="pitch">
+          <p>The AI Stack for Professional Designers.</p>
+          <p>Weekly Tool Critiques, AI Agent Workflows, and Community Case Studies.</p>
+        </div>
       </div>
-      <p class="ok" role="status" aria-live="polite" hidden></p>
-      <a class="sq-details" href="#resource">Details <span aria-hidden="true">↗</span></a>
+      <div class="sq-bot">
+        <label for="email" class="sr">Email address</label>
+        <input class="hp" type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="join-row">
+          <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email" maxlength="254">
+          <button type="submit">Join</button>
+        </div>
+        <p class="ok" role="status" aria-live="polite" hidden></p>
+        <a class="sq-details" href="#resource">Details <span aria-hidden="true">↗</span></a>
+      </div>
     </form>
     <a class="hire-orb" href="#agency">
       <span class="orb" aria-hidden="true">
